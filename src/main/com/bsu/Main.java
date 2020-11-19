@@ -27,7 +27,7 @@ public class Main {
     }
 
     public static boolean isPhoneNumber(String number) {
-        Pattern pattern = Pattern.compile("(\\+375|80)-?\\(?(25|29|44|17|33)\\)?-?(\\d{3}-?\\d{2}-?\\d{2})");
+        Pattern pattern = Pattern.compile("(\\+375|80)-?(\\((25|29|44|17|33)\\)||(25|29|44|17|33))-?(\\d{3}-?\\d{2}-?\\d{2})");
         Matcher matcher = pattern.matcher(number);
         return matcher.matches();
     }
